@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<button id="btn">Click</button>
+	<script>
+		//closure es llamar una funcion dentro de otra funcion 
+
+		(function() {
+	
+		
+		document.getElementById('btn').addEventListener("click",function(){
+			console.log("Hizo clic en mi");
+		});
+     //callback: son funciones que se ejecutan despues de cierto tiempo
+     /*
+        setTimeout(function() {
+        	console.log("Hola Mundo");
+        },5000);
+
+})();*/
+
+//Otra forma de hacer lo anterior 
+ setTimeout(function() {
+        	console.log(hola_mundo("Paty"));
+        },2000);
+
+ })();
+
+function hola_mundo(nombre){
+  function construct() {
+  	return "Hola " + nombre;
+  }
+    return construct();
+}
+
+	</script>
+
+
+</body>
+</html>

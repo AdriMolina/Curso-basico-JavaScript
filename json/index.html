@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	
+//JSON => JavaScript Object Notation
+//Diccionarios / Hashes
+ var arreglos = [1,2,3,4];
+
+//en caso de los diccionarios/ Objeto JSON para el curso
+
+
+//Esta es la estructura del JSON
+var curso = {
+	//Estas son claves
+	titulo: "Curso JavaScript", 
+	videos: 19,
+	tutor: "Uriel",
+	//clave con funcion 
+	introduccion: function() {
+		//La palabra reservada this nos permite acceder a los demas atributos o metodos del json 
+		console.log("Bienvenidos al curso: " +  this.titulo+ " que tiene "+ this.videos+" videos");
+	}, 
+	otra_function: function(){
+
+	}
+};
+
+console.log(curso.introduccion());
+
+
+
+// solo cambias el nombre y es otra forma de imprimir los datos 
+ //console.log(curso["titulo"]);
+// console.log(curso["tutor"]);
+//console.log(curso["videos"]);
+</script>
+
+</body>
+</html>
