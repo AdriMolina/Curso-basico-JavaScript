@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- <meta charset="utf-8"> -->
+</head>
+<body>
+<script>
+/*
+//Ejemplo con uso de get y set imprime uriel y al agregar el set este hereda los valores anteriores y  modifica el valor a imprimir por jose
+
+var curso = {
+	titulo:"Curso JavaScript",
+	videos: 19,
+	tutor: "Uriel",
+	getTutor: function() {
+		return this.tutor;
+	},
+setTutor: function(tutor){
+	this.tutor = tutor;
+ }
+};
+ //modifica el dato(tutor) anterior por jose
+ //curso.setTutor("jose");
+// imprime uriel
+//console.log(curso.getTutor());
+*/
+
+//Ejemplo de donde puedes poner un getters y setters para acceder a los atributos
+
+var curso = {
+	titulo:"Curso JavaScript",
+	videos: 19,
+	tutor_value: "Uriel",
+	get Tutor(){
+		return this.tutor.toUpperCase();
+	},
+	set tutor(tutor){
+		if(tutor === "" || (typeof tutor === "undefined")){
+			return;	}
+			this.tutor_value = tutor;
+	}
+ 
+};
+
+
+curso.tutor = " ";
+console.log(curso.tutor);
+
+
+ 
+
+</script>
+</body>
+</html>
